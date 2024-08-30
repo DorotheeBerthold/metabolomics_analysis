@@ -49,11 +49,6 @@ standards <- standards %>%
   mutate(norm_inject = rowMeans(select(., `13C-Gal`, `13C-Man`, `13C-Glc`), na.rm = TRUE))
 
 
-# Divide each sugar by norm_inject to see how stable the injections are
-
-#standards_norm <- standards %>%
-#  mutate(across(5:(ncol(standards)-1), ~ . / norm_inject))
-
 # Normalize standards
 ######################################################################################################################
 df_std <- standards%>% 
